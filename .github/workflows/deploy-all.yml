@@ -36,6 +36,7 @@ jobs:
       aks_resource_group: ${{ inputs.aks_resource_group }}
       aks_acr_name: ${{ inputs.aks_acr_name }}
     secrets:
+      AZURE_CONTAINER_REGISTRY: ${{ secrets.AZURE_CONTAINER_REGISTRY }}
       AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
 
   deploy_frontend:
