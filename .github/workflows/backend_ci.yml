@@ -16,8 +16,11 @@ on:
       - "feature/**"
     paths: # Only trigger if changes are in backend directories
       - "backend/**"
-      - ".github/workflows/backend_ci.yml" # Trigger if this workflow file changes
-
+      - ".github/workflows/backend_ci.yml" # Trigger if this workflow file changess
+  pull_request:
+    branches:
+      - main
+      - develop
 # Define global environment variables that can be used across jobs
 env:
   # ACR Login Server (e.g., myregistry.azurecr.io)
